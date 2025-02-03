@@ -59,8 +59,8 @@ resource "aws_db_instance" "mysql_standalone" {
   storage_type          = "gp2"
   storage_encrypted     = false
 
-  multi_az            = false
-  availability_zone   = "ap-northeast-1c"  # 変更
+  multi_az               = false
+  availability_zone      = "ap-northeast-1c" # 変更
   db_subnet_group_name   = aws_db_subnet_group.mysql_standalone_subnetgroup.name
   vpc_security_group_ids = [aws_security_group.db_sg.id]
   publicly_accessible    = false

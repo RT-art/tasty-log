@@ -45,8 +45,8 @@ resource "aws_subnet" "private_subnet_1c" {
   cidr_block              = "192.168.2.0/24"
   availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = false
-tags = {
-   Name    = "${var.project}-${var.environment}-private-subnet-1c"
+  tags = {
+    Name    = "${var.project}-${var.environment}-private-subnet-1c"
     project = var.project
     env     = var.environment
     Type    = "private"
